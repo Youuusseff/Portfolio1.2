@@ -47,6 +47,7 @@ const Home = ({ name, title }) => {
           background: "none",
           borderRadius: "50%",
           border: "none",
+          cursor: "pointer",
         }}
         onClick={goAbout}
       >
