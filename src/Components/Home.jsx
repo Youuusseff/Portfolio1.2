@@ -8,6 +8,7 @@
 import React from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
+import "../styles.css";
 
 /**
  * Home background image
@@ -42,8 +43,8 @@ const Home = ({ name, title }) => {
 };
 
 Home.defaultProps = {
-  name: "",
-  title: "",
+  name: "Youssef Benormane",
+  title: "Web Developer & Data Analyst",
 };
 
 Home.propTypes = {
