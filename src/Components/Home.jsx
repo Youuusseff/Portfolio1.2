@@ -14,7 +14,7 @@ import "../styles.css";
  * Home background image
  *
  * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
+ * directory and import here for use. Then, set imageAltText to string that
  * represents what you see in that image.
  *
  *
@@ -23,9 +23,13 @@ import "../styles.css";
  */
 import image from "../images/software.jpg";
 
-const imageAltText = "Adult female in office setting leaning against a glass wall while holding a platinum Microsoft Surface Pro 7 in tablet mode preparing to write with Microsoft Surface Pen";
+const imageAltText =
+  "Adult female in office setting leaning against a glass wall while holding a platinum Microsoft Surface Pro 7 in tablet mode preparing to write with Microsoft Surface Pen";
 
 const Home = ({ name, title }) => {
+  const goAbout = () => {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
@@ -35,9 +39,19 @@ const Home = ({ name, title }) => {
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
+      <button
+        style={{
+          position: "absolute",
+          bottom: "3rem",
+          left: "50%",
+          background: "none",
+          borderRadius: "50%",
+          border: "none",
+        }}
+        onClick={goAbout}
+      >
         <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
-      </div>
+      </button>
     </section>
   );
 };
